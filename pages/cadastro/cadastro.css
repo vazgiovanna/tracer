@@ -1,9 +1,3 @@
-/* ...existing code... */
-
-/* ==========================
-   Variáveis globais / tema
-   - Facilita manutenção e troca de cores/padding/breakpoints
-   ========================== */
 :root{
   --bg: #000;
   --text: #fff;
@@ -25,6 +19,7 @@
    Reset básico / base
    - Box sizing, fonte padrão e limpeza de margin/padding
    ========================== */
+
 *{box-sizing: border-box;margin:0;padding:0;font-family:var(--font-family)}
 html,body{height:100%}
 body{
@@ -34,39 +29,25 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-/* ==========================
-   Layout principal
-   - container-cadastro: split screen (left imagem / right formulário)
-   - Em telas pequenas a .left-side é escondida (ver media queries)
-   ========================== */
 .container-cadastro{
   display:flex;
   min-height:100vh;
   width:100%;
 }
 
-/* --------------------
-   LEFT SIDE (imagem)
-   - Background: imagem + gradiente de fallback
-   - width fixa relativa, não encolhe (flex-shrink:0)
-   - sobreposições e efeitos (overlay, grain, fade)
-   -------------------- */
-/* Troque a imagem em public/img/ -> 'img/Imagemcadastro.jpg' */
 .left-side{
   position:relative;
-  width:52%;
+  width:50%;
   min-height:100vh;
   overflow:hidden;
   flex-shrink:0;
 
-  /* imagem principal + gradiente de fallback para tonalidade quente */
   background-image: url('imagem-cadastro.jpg'),
                     linear-gradient(180deg,#4b0f06 0%, #000 100%);
   background-size: cover, cover;
   background-position: center;
 }
 
-/* Overlay escuro/laranja para aproximar do mockup */
 .left-overlay{
   position:absolute;
   inset:0;
@@ -250,7 +231,6 @@ a{color:var(--accent-link)}
 }
 
 @media (max-width:900px){
-  /* dispositivo médio / mobile: esconde imagem, formulário ocupa 100% */
   .left-side{display:none}
   .right-side{
     width:100%;
@@ -271,11 +251,3 @@ a{color:var(--accent-link)}
   .cad-form h3{font-size:1.05rem}
   .btn-create{padding:12px}
 }
-
-/* ==========================
-   Observações de manutenção
-   - Para trocar a imagem do lado esquerdo: substituir 'img/Imagemcadastro.jpg'
-     por sua imagem em public/img/ e ajustar background-position/size se necessário.
-   ========================== */
-
-/* ...existing code... */
