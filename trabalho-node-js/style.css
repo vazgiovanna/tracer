@@ -1,0 +1,574 @@
+/* ==========================================================
+   RESET GLOBAL (Vale para todas as telas)
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ==========================================================
+   TELA 1: LOGIN (.pg-login)
+   ========================================================== */
+body.pg-login {
+    overflow: hidden;
+}
+
+.pg-login .container-login {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pg-login .left-side {
+    width: 50%;
+    height: 100%;
+    /* Caminho ajustado para a pasta */
+    background-image: url('tela_login/imagem-login.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.pg-login .left-side::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(255,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%);
+    opacity: 0.8;
+}
+
+.pg-login .right-side {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse 400% 80% at bottom, rgba(233, 79, 3, 0.3) 20%, transparent 45%), #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 154px 20px 20px 20px;
+}
+
+.pg-login .logo-container {
+    margin-bottom: 150px;
+    width: 100%;
+    text-align: center;
+}
+.pg-login .logo-container img {
+    max-width: 412px;
+    width: 100%;
+    height: auto;
+}
+
+.pg-login .form-container {
+    width: 100%;
+    max-width: 596px;
+    color: #fff;
+}
+
+.pg-login .form-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.pg-login .input-group {
+    margin-bottom: 25px;
+}
+.pg-login .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+.pg-login .input-group input[type="email"],
+.pg-login .input-group input[type="password"] {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    background: transparent;
+    border-color: #E94F03;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+}
+.pg-login .input-group input[type="email"]:focus,
+.pg-login .input-group input[type="password"]:focus {
+    border-bottom: 1px solid #FF5722;
+}
+
+.pg-login .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 0.9em;
+}
+.pg-login .options .remember-me {
+    display: flex;
+    align-items: center;
+}
+.pg-login .options .remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #FF5722;
+}
+.pg-login .options a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.pg-login .options a:hover {
+    color: #FF5722;
+}
+
+.pg-login .btn-access {
+    max-width: 593px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    display: block;
+    margin: 0 auto 35px auto;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.pg-login .btn-access:hover {
+    background-color: #e64a19;
+}
+
+.pg-login .signup-link {
+    text-align: center;
+    font-size: 0.9em;
+}
+.pg-login .signup-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.pg-login .signup-link a:hover {
+    color: #FF5722;
+}
+
+/* Responsivo Login */
+@media (max-width: 1000px) {
+    .pg-login .left-side { display: none; }
+    .pg-login .right-side { width: 100%; height: 100vh; padding: 60px 25px 25px 25px; }
+    .pg-login .logo-container img { width: 80%; max-width: 300px; }
+    .pg-login .form-container { width: 100%; max-width: 100%; }
+    .pg-login .btn-access { width: 100%; }
+    .pg-login .options { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .pg-login .form-container h2 { font-size: 1.6em; }
+}
+
+/* ==========================================================
+   TELA 2: CADASTRO (.pg-cadastro)
+   ========================================================== */
+body.pg-cadastro {
+    overflow: hidden;
+}
+
+.pg-cadastro .container-cadastro {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pg-cadastro .left-side {
+    width: 50%;
+    height: 100%;
+    /* Caminho ajustado */
+    background-image: url('tela_cadastro/imagem-cadastro.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.pg-cadastro .left-side::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(255,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%);
+    opacity: 0.8;
+}
+
+.pg-cadastro .right-side {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse 150% 80% at bottom left, rgba(233, 79, 3, 0.3) 0%, transparent 50%), #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 40px 20px;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.pg-cadastro .logo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.pg-cadastro .logo-container img {
+    max-width: 412px;
+    width: 100%;
+    height: auto;
+}
+
+.pg-cadastro .form-container {
+    width: 100%;
+    max-width: 596px;
+}
+.pg-cadastro .form-container h3 {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.pg-cadastro .input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.pg-cadastro .input-group {
+    margin-bottom: 25px;
+}
+.pg-cadastro .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+.pg-cadastro .input-group label .required {
+    color: #E94F03;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.pg-cadastro .input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    background: transparent;
+    border: 2px solid #E94F03; /* Ajuste para garantir a borda */
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.pg-cadastro .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+.pg-cadastro .checkbox-group input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 0; height: 0;
+    position: absolute; opacity: 0;
+}
+.pg-cadastro .checkbox-group label {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+.pg-cadastro .checkbox-group label::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 2px;
+    width: 16px; height: 16px;
+    border: 2px solid #E94F03;
+    border-radius: 4px;
+    background: transparent;
+}
+.pg-cadastro .checkbox-group label::after {
+    content: '\2713';
+    position: absolute;
+    left: 4px; top: 2px;
+    font-size: 16px;
+    color: #E94F03;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.pg-cadastro .checkbox-group input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+}
+.pg-cadastro .checkbox-group label a {
+    color: #FF5722;
+    text-decoration: underline;
+}
+
+.pg-cadastro .btn-create {
+    max-width: 593px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.pg-cadastro .btn-create:hover {
+    background-color: #e64a19;
+}
+
+/* Responsivo Cadastro */
+@media (max-width: 1000px) {
+    .pg-cadastro .left-side { display: none; }
+    .pg-cadastro .right-side { width: 100%; padding: 40px 25px; }
+    .pg-cadastro .form-container { max-width: 100%; }
+    .pg-cadastro .input-grid { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* ==========================================================
+   TELA 3: RECUPERAÇÃO DE SENHA (.pg-recovery)
+   ========================================================== */
+body.pg-recovery {
+    overflow: hidden;
+}
+
+.pg-recovery .container-recovery {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pg-recovery .left-side {
+    width: 50%;
+    height: 100%;
+    /* Caminho ajustado */
+    background-image: url('tela_recuperacao_de_senha/imagem-recuperacao-de-senha.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.pg-recovery .left-side::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(255,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%);
+    opacity: 0.8;
+}
+
+.pg-recovery .right-side {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse 150% 80% at bottom left, rgba(233, 79, 3, 0.3) 0%, transparent 50%), #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 154px 20px 40px 20px;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.pg-recovery .logo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.pg-recovery .logo-container img {
+    max-width: 412px;
+    width: 100%;
+    height: auto;
+}
+
+.pg-recovery .form-container {
+    width: 100%;
+    max-width: 596px;
+}
+.pg-recovery .form-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+.pg-recovery .form-container .subtitle {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.pg-recovery .input-group { margin-bottom: 25px; }
+.pg-recovery .input-group label { display: block; margin-bottom: 8px; font-size: 0.9em; color: #ccc; }
+.pg-recovery .input-group label .required { color: #E94F03; font-weight: bold; margin-left: 2px; }
+.pg-recovery .input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    background: transparent;
+    border: 1px solid #E94F03;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.pg-recovery .btn-send {
+    max-width: 340px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    display: block;
+    margin: 75px auto 0 auto;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.pg-recovery .btn-send:hover { background-color: #e64a19; }
+
+.pg-recovery .back-link {
+    width: 100%;
+    max-width: 596px;
+    text-align: center;
+    margin-top: 50px;
+}
+.pg-recovery .back-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.pg-recovery .back-link a:hover { text-decoration: underline; }
+
+/* Responsivo Recuperação */
+@media (max-width: 1000px) {
+    .pg-recovery .left-side { display: none; }
+    .pg-recovery .right-side { width: 100%; padding: 60px 25px 40px 25px; }
+    .pg-recovery .form-container { max-width: 100%; }
+    .pg-recovery .logo-container img { max-width: 300px; }
+}
+
+/* ==========================================================
+   TELA 4: CRIAR TREINO (.pg-treino)
+   ========================================================== */
+body.pg-treino {
+    /* Caminho ajustado */
+    background-image: url('/tela-criar-treino/imagem-criar-treino.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a1a1a;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.pg-treino .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    position: relative;
+    background-color: #000;
+}
+.pg-treino .logo img { width: 400px; height: auto; margin-left: 250px; }
+
+.pg-treino .search-bar { position: relative; margin-right: 600px; }
+.pg-treino .search-bar input {
+    width: 600px; height: 40px; background: transparent;
+    border: 1px solid #E94F03; border-radius: 5px; color: #fff;
+    padding-left: 15px; padding-right: 40px; font-size: 1em;
+}
+.pg-treino .search-bar input:focus { outline: none; border-color: #E94F03; }
+.pg-treino .search-bar .search-icon {
+    position: absolute; right: 20px; top: 50%;
+    transform: translateY(-50%); color: #E94F03;
+}
+
+.pg-treino .main-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 60px 60px 60px;
+    margin-top: 40px;
+}
+.pg-treino .form-wrapper { width: 100%; max-width: 900px; }
+.pg-treino .form-wrapper h2 {
+    width: 100%; font-size: 4.0em;
+    font-family: 'Montserrat', sans-serif; font-style: italic;
+    margin-bottom: 100px; margin-top: 300px; margin-left: 550px;
+    color: #fff;
+}
+
+.pg-treino .form-group { margin-bottom: 25px; }
+.pg-treino .form-group label {
+    width: 100%; display: block; margin-bottom: 8px;
+    margin-left: 250px; color: #ccc; font-size: 1em;
+    font-family: "Century Gothic", sans-serif;
+}
+.pg-treino .form-group input[type="text"],
+.pg-treino .form-group input[type="date"],
+.pg-treino .form-group select {
+    width: 100%; height: 55px; padding: 0 10px; margin-left: 250px;
+    background: transparent; border: 1px solid #E94F03;
+    border-radius: 8px; color: #fff; font-size: 1.2em;
+    font-family: "Century Gothic", sans-serif; outline: none;
+}
+.pg-treino .form-group input[type="date"] { width: 50%; }
+
+.pg-treino .form-group select {
+    appearance: none;
+    background: transparent url("data:image/svg+xml;utf8,<svg fill='%23E94F03' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 10px center;
+    background-size: 24px;
+}
+.pg-treino .form-group select option { background: #333; color: #fff; }
+
+.pg-treino .form-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
+.pg-treino .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+
+.pg-treino .separator-line {
+    width: 100%; height: 1px; background-color: #E94F03;
+    margin: 40px 0 30px 0; margin-left: 250px;
+}
+
+.pg-treino .button-group {
+    margin-top: 70px; margin-left: 425px; display: flex; gap: 15px;
+}
+.pg-treino .btn {
+    padding: 15px 90px; border: none; border-radius: 5px;
+    font-size: 1em; font-family: "Century Gothic", sans-serif;
+    font-weight: bold; cursor: pointer; transition: all 0.3s ease;
+}
+.pg-treino .btn-primary { background-color: #E94F03; color: #fff; }
+.pg-treino .btn-primary:hover { background-color: #e64a19; }
+.pg-treino .btn-secondary { background-color: transparent; color: #ccc; border: 1px solid #E94F03; }
+.pg-treino .btn-secondary:hover { background-color: #555; color: #fff; }
+
+/* Responsivo Criar Treino */
+@media (max-width: 1000px) {
+    .pg-treino .main-header { flex-direction: column; gap: 30px; padding: 40px 25px; }
+    .pg-treino .main-header .search-bar { margin-right: 0; }
+    .pg-treino .search-bar input { width: 100%; }
+    .pg-treino .main-container { padding: 0 25px 40px 25px; margin-top: 20px; }
+    .pg-treino .form-grid-3, .pg-treino .form-grid-2 { grid-template-columns: 1fr; gap: 0; }
+}
